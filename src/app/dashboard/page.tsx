@@ -97,7 +97,7 @@ export default function Dashboard() {
               Climate Intelligence Dashboard
             </Badge>
             <Heading variant="display-strong-l" wrap="balance">Research, impact & climate action</Heading>
-            <Text variant="heading-default-m" onBackground="neutral-weak" wrap="balance" maxWidth="m">
+            <Text variant="heading-default-m" onBackground="neutral-weak" wrap="balance">
               A live portfolio view of {person.name}&apos;s climate research, environmental projects, digital engagement, and carbon tools.
             </Text>
           </Column>
