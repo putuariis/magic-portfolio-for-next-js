@@ -9,16 +9,17 @@ import {
   Schema,
   Text,
 } from "@once-ui-system/core";
+import { ImpactVisualization } from "@/components/dashboard/ImpactVisualization";
 import { about, baseURL, person } from "@/resources";
 import styles from "./dashboard.module.scss";
 
 const impact = [
-  { value: "35", label: "Participants", note: "National virtual workshop" },
-  { value: "13", label: "Educational vlogs", note: "Youth-created content" },
-  { value: "20K+", label: "Vlog views", note: "Digital outreach" },
-  { value: "30K+", label: "Impressions", note: "Campaign reach" },
-  { value: "14.7%", label: "Knowledge increase", note: "Carbon footprint understanding" },
-  { value: "77%", label: "Pre/post participation", note: "Workshop assessment" },
+  { value: "35", amount: 35, label: "Participants", note: "National virtual workshop" },
+  { value: "13", amount: 13, label: "Educational vlogs", note: "Youth-created content" },
+  { value: "20K+", amount: 20000, label: "Vlog views", note: "Digital outreach" },
+  { value: "30K+", amount: 30000, label: "Impressions", note: "Campaign reach" },
+  { value: "14.7%", amount: 14.7, label: "Knowledge increase", note: "Carbon footprint understanding" },
+  { value: "77%", amount: 77, label: "Pre/post participation", note: "Workshop assessment" },
 ];
 
 const research = [
@@ -79,7 +80,7 @@ export async function generateMetadata() {
 
 export default function Dashboard() {
   return (
-    <Column maxWidth="m" gap="l" paddingY="12" horizontal="center">
+    <Column maxWidth="m" gap="m" paddingY="10" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -104,28 +105,20 @@ export default function Dashboard() {
         </Row>
       </Column>
 
-      <Row fillWidth gap="l" s={{ direction: "column" }} vertical="start">
+      <Row fillWidth gap="m" s={{ direction: "column" }} vertical="start">
         <Column flex={1} gap="m">
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Project impact</Heading>
-            <Row fillWidth wrap gap="8" s={{ direction: "column" }}>
-              {impact.map((item) => (
-                <Card key={item.label} className={styles.metricCard} border="neutral-alpha-weak" radius="l" padding="m">
-                  <Column gap="4">
-                    <Text variant="display-strong-s">{item.value}</Text>
-                    <Text variant="heading-default-xs">{item.label}</Text>
-                    <Text variant="body-default-xs" onBackground="neutral-weak">{item.note}</Text>
-                  </Column>
-                </Card>
-              ))}
-            </Row>
+            <Card border="neutral-alpha-weak" radius="l" padding="m">
+              <ImpactVisualization impact={impact} />
+            </Card>
           </Column>
 
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Research & technical work</Heading>
             <Row fillWidth wrap gap="8" s={{ direction: "column" }}>
               {research.map((item) => (
-                <Card key={item.title} className={styles.researchCard} border="neutral-alpha-weak" radius="l" padding="m">
+                <Card key={item.title} className={styles.researchCard} border="neutral-alpha-weak" radius="l" padding="s">
                   <Column fillWidth gap="8">
                     <Row fillWidth horizontal="between" gap="12" vertical="start">
                       <Column gap="4">
@@ -148,7 +141,7 @@ export default function Dashboard() {
         <Column flex={1} gap="m">
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Carbon & climate action</Heading>
-            <Card border="brand-alpha-medium" background="brand-alpha-weak" radius="l" padding="m">
+            <Card border="brand-alpha-medium" background="brand-alpha-weak" radius="l" padding="s">
               <Column gap="8">
                 <Heading as="h3" variant="heading-strong-s">Carbon Calculator</Heading>
                 <Text variant="body-default-s" onBackground="neutral-weak">
@@ -167,7 +160,7 @@ export default function Dashboard() {
 
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Core capabilities</Heading>
-            <Card border="neutral-alpha-weak" radius="l" padding="m">
+            <Card border="neutral-alpha-weak" radius="l" padding="s">
               <Row wrap gap="8">
                 {skills.map((skill) => <Badge key={skill} arrow={false}>{skill}</Badge>)}
               </Row>
@@ -176,7 +169,7 @@ export default function Dashboard() {
 
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Career & academic timeline</Heading>
-            <Card border="neutral-alpha-weak" radius="l" padding="m">
+            <Card border="neutral-alpha-weak" radius="l" padding="s">
               <Column className={styles.timeline} fillWidth>
                 {timeline.map(([year, title, organization]) => (
                   <Row key={`${year}-${title}`} fillWidth gap="12" className={styles.timelineItem} vertical="start">
