@@ -80,7 +80,7 @@ export async function generateMetadata() {
 
 export default function Dashboard() {
   return (
-    <Column maxWidth="m" gap="m" paddingY="10" horizontal="center">
+    <Column maxWidth="m" gap="m" paddingY="m" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
