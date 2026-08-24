@@ -4,11 +4,11 @@ import { Line, Row, Text } from "@once-ui-system/core";
 const person: Person = {
   firstName: "I Putu",
   lastName: "Arisgunarta",
-  name: "I Putu Arisgunarta",
-  role: "Climate Analyst",
+  name: "Putu Aris",
+  role: "Climate Learner",
   avatar: "/images/avatar.jpg",
   email: "putuaris.g@gmail.com",
-  location: "Asia/Jakarta",
+  location: "Indonesia/Jakarta",
   languages: ["Bahasa Indonesia", "English"],
   locale: "en",
 };
@@ -38,14 +38,14 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name} – Climate Analyst`,
+  title: `${person.name} – Climate Learner`,
   description: `Portfolio of ${person.name}, a climate and air quality professional working across climate education, environmental programs, data analysis, and research.`,
-  headline: <>Transforming climate data into real solutions for resilient communities</>,
+  headline: <>Wellcome Wanderer!</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Climate Action</strong>
+        <strong className="ml-4">Putu Aris</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">Featured project</Text>
       </Row>
@@ -54,7 +54,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.name}, a climate and air quality professional with experience in project coordination,
+      I'm {person.name}, a climate and air quality professional with experience in project management,
       environmental education, data analysis, and community-based climate action.
     </>
   ),
@@ -86,7 +86,7 @@ const about: About = {
     experiences: [
       {
         company: "Carbonaddons (Carbon Academy Vol. 3)",
-        timeframe: "Apr 2026 – Present (Weekend)",
+        timeframe: "Apr 2026 – Present",
         role: "Part-Time Facilitator – Climate Education Program",
         achievements: [
           <>Facilitated online sessions and supported program delivery and coordination.</>,
