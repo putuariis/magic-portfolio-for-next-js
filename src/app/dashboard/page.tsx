@@ -4,7 +4,6 @@ import {
   Card,
   Column,
   Heading,
-  Line,
   Meta,
   Row,
   Schema,
@@ -80,7 +79,7 @@ export async function generateMetadata() {
 
 export default function Dashboard() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column maxWidth="m" gap="l" paddingY="12" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -96,100 +95,105 @@ export default function Dashboard() {
             <Badge background="brand-alpha-weak" onBackground="brand-strong" arrow={false}>
               Climate Intelligence Dashboard
             </Badge>
-            <Heading variant="display-strong-l" wrap="balance">Research, impact & climate action</Heading>
-            <Text variant="heading-default-m" onBackground="neutral-weak" wrap="balance">
+            <Heading variant="display-strong-m" wrap="balance">Research, impact & climate action</Heading>
+            <Text variant="body-default-m" onBackground="neutral-weak" wrap="balance">
               A live portfolio view of {person.name}&apos;s climate research, environmental projects, digital engagement, and carbon tools.
             </Text>
           </Column>
-          <Button href="/carbon-calculator" variant="primary" arrowIcon>Open Carbon Calculator</Button>
+          <Button href="/carbon-calculator" variant="primary" size="s" arrowIcon>Open Carbon Calculator</Button>
         </Row>
       </Column>
 
-      <Column fillWidth gap="m">
-        <Row fillWidth paddingRight="64"><Line maxWidth={48} /></Row>
-        <Heading as="h2" variant="display-strong-xs">Project impact</Heading>
-        <Row fillWidth wrap gap="12" s={{ direction: "column" }}>
-          {impact.map((item) => (
-            <Card key={item.label} className={styles.metricCard} border="neutral-alpha-weak" radius="l" padding="l">
-              <Column gap="8">
-                <Text variant="display-strong-m">{item.value}</Text>
-                <Text variant="heading-default-s">{item.label}</Text>
-                <Text variant="body-default-s" onBackground="neutral-weak">{item.note}</Text>
-              </Column>
-            </Card>
-          ))}
-        </Row>
-      </Column>
-
-      <Column fillWidth gap="m">
-        <Heading as="h2" variant="display-strong-xs">Research & technical work</Heading>
-        <Row fillWidth wrap gap="16" s={{ direction: "column" }}>
-          {research.map((item) => (
-            <Card key={item.title} className={styles.researchCard} border="neutral-alpha-weak" radius="l" padding="l">
-              <Column fillWidth gap="16">
-                <Row fillWidth horizontal="between" gap="16" vertical="start">
-                  <Column gap="4">
-                    <Heading as="h3" variant="heading-strong-m">{item.title}</Heading>
-                    <Text variant="body-default-s" onBackground="neutral-weak">{item.meta}</Text>
-                  </Column>
-                  <Badge background="brand-alpha-weak" onBackground="brand-strong" arrow={false}>{item.value}</Badge>
-                </Row>
-                <Text variant="body-default-m" onBackground="neutral-weak">{item.description}</Text>
-                <Button href={item.href} variant="secondary" size="s" arrowIcon>View project</Button>
-              </Column>
-            </Card>
-          ))}
-        </Row>
-      </Column>
-
-      <Row fillWidth gap="xl" s={{ direction: "column" }}>
+      <Row fillWidth gap="l" s={{ direction: "column" }} vertical="start">
         <Column flex={1} gap="m">
-          <Heading as="h2" variant="display-strong-xs">Carbon & climate action</Heading>
-          <Card border="brand-alpha-medium" background="brand-alpha-weak" radius="l" padding="l">
-            <Column gap="16">
-              <Heading as="h3" variant="heading-strong-m">Carbon Calculator</Heading>
-              <Text variant="body-default-m" onBackground="neutral-weak">
-                The portfolio includes the existing Carbon Calculator for exploring transport and electricity emissions, alongside activity-based reduction scenarios.
-              </Text>
-              <Row gap="8" wrap>
-                <Badge arrow={false}>Transport</Badge>
-                <Badge arrow={false}>Electricity</Badge>
-                <Badge arrow={false}>Waste</Badge>
-                <Badge arrow={false}>Action tracking</Badge>
-              </Row>
-              <Button href="/carbon-calculator" variant="primary" arrowIcon>Calculate footprint</Button>
-            </Column>
-          </Card>
+          <Column fillWidth gap="s">
+            <Heading as="h2" variant="display-strong-xs">Project impact</Heading>
+            <Row fillWidth wrap gap="8" s={{ direction: "column" }}>
+              {impact.map((item) => (
+                <Card key={item.label} className={styles.metricCard} border="neutral-alpha-weak" radius="l" padding="m">
+                  <Column gap="4">
+                    <Text variant="display-strong-s">{item.value}</Text>
+                    <Text variant="heading-default-xs">{item.label}</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-weak">{item.note}</Text>
+                  </Column>
+                </Card>
+              ))}
+            </Row>
+          </Column>
+
+          <Column fillWidth gap="s">
+            <Heading as="h2" variant="display-strong-xs">Research & technical work</Heading>
+            <Row fillWidth wrap gap="8" s={{ direction: "column" }}>
+              {research.map((item) => (
+                <Card key={item.title} className={styles.researchCard} border="neutral-alpha-weak" radius="l" padding="m">
+                  <Column fillWidth gap="8">
+                    <Row fillWidth horizontal="between" gap="12" vertical="start">
+                      <Column gap="4">
+                        <Heading as="h3" variant="heading-strong-s">{item.title}</Heading>
+                        <Text variant="body-default-xs" onBackground="neutral-weak">{item.meta}</Text>
+                      </Column>
+                      <Badge background="brand-alpha-weak" onBackground="brand-strong" arrow={false}>{item.value}</Badge>
+                    </Row>
+                    <Text className={styles.researchDescription} variant="body-default-s" onBackground="neutral-weak">
+                      {item.description}
+                    </Text>
+                    <Button href={item.href} variant="secondary" size="s" arrowIcon>View project</Button>
+                  </Column>
+                </Card>
+              ))}
+            </Row>
+          </Column>
         </Column>
 
         <Column flex={1} gap="m">
-          <Heading as="h2" variant="display-strong-xs">Core capabilities</Heading>
-          <Card border="neutral-alpha-weak" radius="l" padding="l">
-            <Row wrap gap="8">
-              {skills.map((skill) => <Badge key={skill} arrow={false}>{skill}</Badge>)}
-            </Row>
-          </Card>
+          <Column fillWidth gap="s">
+            <Heading as="h2" variant="display-strong-xs">Carbon & climate action</Heading>
+            <Card border="brand-alpha-medium" background="brand-alpha-weak" radius="l" padding="m">
+              <Column gap="8">
+                <Heading as="h3" variant="heading-strong-s">Carbon Calculator</Heading>
+                <Text variant="body-default-s" onBackground="neutral-weak">
+                  Explore transport and electricity emissions with activity-based reduction scenarios.
+                </Text>
+                <Row gap="8" wrap>
+                  <Badge arrow={false}>Transport</Badge>
+                  <Badge arrow={false}>Electricity</Badge>
+                  <Badge arrow={false}>Waste</Badge>
+                  <Badge arrow={false}>Action tracking</Badge>
+                </Row>
+                <Button href="/carbon-calculator" variant="primary" size="s" arrowIcon>Calculate footprint</Button>
+              </Column>
+            </Card>
+          </Column>
+
+          <Column fillWidth gap="s">
+            <Heading as="h2" variant="display-strong-xs">Core capabilities</Heading>
+            <Card border="neutral-alpha-weak" radius="l" padding="m">
+              <Row wrap gap="8">
+                {skills.map((skill) => <Badge key={skill} arrow={false}>{skill}</Badge>)}
+              </Row>
+            </Card>
+          </Column>
+
+          <Column fillWidth gap="s">
+            <Heading as="h2" variant="display-strong-xs">Career & academic timeline</Heading>
+            <Card border="neutral-alpha-weak" radius="l" padding="m">
+              <Column className={styles.timeline} fillWidth>
+                {timeline.map(([year, title, organization]) => (
+                  <Row key={`${year}-${title}`} fillWidth gap="12" className={styles.timelineItem} vertical="start">
+                    <Text className={styles.timelineYear} variant="label-default-s">{year}</Text>
+                    <Column gap="2">
+                      <Text variant="body-strong-s">{title}</Text>
+                      <Text variant="body-default-xs" onBackground="neutral-weak">{organization}</Text>
+                    </Column>
+                  </Row>
+                ))}
+              </Column>
+            </Card>
+          </Column>
         </Column>
       </Row>
 
-      <Column fillWidth gap="m">
-        <Heading as="h2" variant="display-strong-xs">Career & academic timeline</Heading>
-        <Card border="neutral-alpha-weak" radius="l" padding="l">
-          <Column className={styles.timeline} fillWidth>
-            {timeline.map(([year, title, organization]) => (
-              <Row key={`${year}-${title}`} fillWidth gap="20" className={styles.timelineItem} vertical="start">
-                <Text className={styles.timelineYear} variant="label-default-s">{year}</Text>
-                <Column gap="4">
-                  <Text variant="heading-strong-s">{title}</Text>
-                  <Text variant="body-default-s" onBackground="neutral-weak">{organization}</Text>
-                </Column>
-              </Row>
-            ))}
-          </Column>
-        </Card>
-      </Column>
-
-      <Row fillWidth horizontal="end" paddingTop="m">
+      <Row fillWidth horizontal="end">
         <Button href="/about" variant="secondary" arrowIcon>View full profile</Button>
       </Row>
     </Column>

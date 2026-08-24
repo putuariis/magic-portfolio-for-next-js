@@ -1,11 +1,18 @@
 .metricCard {
-  flex: 1 1 180px;
+  flex: 1 1 150px;
   min-width: 0;
 }
 
 .researchCard {
-  flex: 1 1 300px;
+  flex: 1 1 260px;
   min-width: 0;
+}
+
+.researchDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .timeline {
@@ -15,7 +22,7 @@
 
 .timelineItem {
   position: relative;
-  padding: 18px 0 18px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--neutral-alpha-weak);
 }
 
@@ -24,14 +31,14 @@
 }
 
 .timelineYear {
-  width: 92px;
-  flex: 0 0 92px;
-  padding-top: 4px;
+  width: 80px;
+  flex: 0 0 80px;
+  padding-top: 2px;
 }
 
 @media (max-width: 560px) {
   .timelineYear {
-    width: 76px;
-    flex-basis: 76px;
+    width: 72px;
+    flex-basis: 72px;
   }
 }
