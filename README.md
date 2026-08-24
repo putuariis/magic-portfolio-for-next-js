@@ -1,83 +1,93 @@
-# I Putu Arisgunarta — Climate Portfolio
+# Magic Portfolio
 
-A personalized, responsive Next.js portfolio for **I Putu Arisgunarta**, based on the supplied CV and portfolio materials.
+Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
 
-## Positioning
+View the demo [here](https://demo.magic-portfolio.com).
 
-**Climate Analyst | Applied Climatology**
+![Magic Portfolio](public/images/og/home.jpg)
 
-The visual direction combines a scientific/data-oriented interface with an earthy, environmental palette inspired by tropical landscapes and fieldwork.
+Launch your portfolio on [Aveiro](https://www.aveiro.app/marketplace/spotlight), our managed publishing platform. Update case studies, blog posts and content through MCP from your favorite AI tools.
 
-Content is grounded in the supplied profile:
-- Applied climatology and applied meteorology
-- Climate and air-quality research
-- AI-based temperature modeling
-- PM2.5 / ESP32 IoT monitoring
-- Climate education and youth engagement
-- Project coordination, MEL, reporting, and stakeholder communication
+## Getting started
 
-## Main sections
+**1. Clone the repository**
+```
+git clone https://github.com/once-ui-system/magic-portfolio.git
+```
 
-- **Home** — positioning, impact snapshot, selected projects
-- **Profile** — professional experience, education, and technical toolkit
-- **Research** — project case studies
-- Blog and gallery routes are disabled by default because the supplied profile does not require them.
-
-## Run locally
-
-Requires Node.js 18.17+.
-
-```bash
+**2. Install dependencies**
+```
 npm install
+```
+
+**3. Run dev server**
+```
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
-
-## Production build
-
-```bash
-npm run build
-npm start
+**4. Edit config**
+```
+src/resources/once-ui.config.js
 ```
 
-## Vercel
+**5. Edit content**
+```
+src/resources/content.js
+```
 
-1. Push this repository to GitHub.
-2. Import the repository into Vercel.
-3. Framework preset: **Next.js**.
-4. Build command: `npm run build`.
-5. Output directory: leave the Vercel default.
-6. Deploy.
-7. Add your custom domain in Vercel's project settings.
+**6. Create blog posts / projects**
+```
+Add a new .mdx file to src/app/blog/posts or src/app/work/projects
+```
 
-The canonical site URL is configured in `src/resources/once-ui.config.ts`.
+Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
-## Where to edit content
+## Documentation
 
-- `src/resources/content.tsx` — identity, home copy, experience, education, skills, social links.
-- `src/resources/once-ui.config.ts` — domain, theme, navigation, effects.
-- `src/app/work/projects/*.mdx` — research/project case studies.
-- `src/resources/custom.css` — visual refinements.
+Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
 
-## Important
+## Features
 
-The project uses the original Magic Portfolio / Once UI architecture. The placeholder designer/developer profile and placeholder case studies were replaced with the supplied climate profile and project information.
+### Once UI
+- All tokens, components & features of [Once UI](https://once-ui.com)
 
-The project cover graphics in `public/images/projects/` are custom-generated visual placeholders for the case studies; replace them with original research figures, screenshots, or photographs when available.
+### SEO
+- Automatic open-graph and X image generation with next/og
+- Automatic schema and metadata generation based on the content file
 
-## Carbon Calculator
+### Design
+- Responsive layout optimized for all screen sizes
+- Timeless design without heavy animations and motion
+- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
 
-If you have a standalone `Carbon Calculator.html`, place it in `public/` and link it from a project card or a dedicated route. The source was not included in the uploaded ZIP, so it has intentionally not been fabricated.
+### Content
+- Render sections conditionally based on the content file
+- Enable or disable pages for blog, work, gallery and about / CV
+- Generate and display social links automatically
+- Set up password protection for URLs
 
+### Localization
+- A localized, earlier version of Magic Portfolio is available with the next-intl library
+- To use localization, switch to the 'i18n' branch
 
-## Integrated Carbon Tool
+## Creators
 
-The portfolio now includes the provided `index (7).html` as the interactive **Carbon Footprint Detective** tool.
+Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://www.linkedin.com/in/lorant-one/)
 
-- Portfolio route: `/carbon-calculator`
-- Static calculator source: `public/carbon-calculator.html`
-- Project page: `src/app/work/projects/carbon-footprint-detective.mdx`
-- The calculator is surfaced from the main navigation and homepage.
+## Get involved
 
-The calculator keeps its client-side logic and methodology notes intact while its visible branding has been adapted to **I Putu Arisgunarta — Climate × Data × Community**.
+- Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
+- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
+
+## License
+
+Distributed under the CC BY-NC 4.0 License.
+- Attribution is required.
+- Commercial usage is not allowed.
+- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
+
+See `LICENSE.txt` for more information.
+
+## Deploy with Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
