@@ -109,6 +109,22 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="calculator"
+                  href="/carbon-calculator"
+                  label="Carbon Tool"
+                  selected={pathname.startsWith("/carbon-calculator")}
+                />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="calculator"
+                  href="/carbon-calculator"
+                  selected={pathname.startsWith("/carbon-calculator")}
+                />
+              </Row>
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/work"] && (
                 <>
                   <Row s={{ hide: true }}>

@@ -2,49 +2,34 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-  locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
+  firstName: "I Putu",
+  lastName: "Arisgunarta",
+  name: "I Putu Arisgunarta",
+  role: "Climate Analyst | Applied Climatology",
+  avatar: "/images/avatar-aris.svg",
+  email: "putuaris.g@gmail.com",
+  location: "Asia/Jakarta",
+  languages: ["Bahasa Indonesia", "English"],
+  locale: "en",
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Climate notes from {person.firstName}</>,
+  description: <>Research, climate data, and practical climate action.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/putuaris/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.instagram.com/mycarbonsteps/",
     essential: true,
   },
   {
@@ -57,37 +42,42 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/climate-og.png",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `${person.name} — Climate Analyst`,
+  description:
+    "Portfolio of I Putu Arisgunarta: applied climatology, climate data analytics, air quality research, IoT, climate education, and community action.",
+  headline: <>Turning climate data into action.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured research</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          AI climate modeling
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/ai-based-climate-modeling",
   },
   subline: (
     <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      I’m {person.firstName}, an applied climatology researcher working at the intersection of{" "}
+      <Text as="span" size="xl" weight="strong">
+        climate data, technology, and social impact
+      </Text>
+      . I translate evidence into tools, learning programs, and practical solutions for resilient
+      communities.
     </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Profile",
+  title: `About — ${person.name}`,
+  description: `${person.name} is a climate and air quality professional focused on applied climatology, data, education, and environmental action.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -96,138 +86,155 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Climate data → real-world impact",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        An early-career climate and air quality professional with hands-on experience in project
+        coordination, data management, environmental programs, and research. My work combines
+        applied climatology with data analysis, IoT, climate education, and stakeholder engagement
+        to make environmental evidence more understandable and actionable.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Professional Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Carbonaddons / Carbon Academy Vol. 3",
+        timeframe: "Apr 2026 — Present",
+        role: "Part-Time Facilitator — Climate Education Program",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Facilitate online climate education sessions and support program delivery.</>,
+          <>Manage attendance, documentation, reporting, and participant engagement.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "MyCarbonSteps × Carbon Academy",
+        timeframe: "Feb 2025 — Jun 2025",
+        role: "Project Leader — Carbon Vlogger Workshop & Challenge",
+        achievements: [
+          <>Led a national climate education project with 30+ participants across Indonesia.</>,
+          <>Managed timelines, deliverables, partners, monitoring and evaluation, and reporting.</>,
+          <>Coordinated digital outputs reaching 20,000+ users and 30,000+ impressions.</>,
+          <>Supported funding acquisition and project continuation planning.</>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/carbon-vlogger.svg",
+            alt: "Carbon Vlogger climate education project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Rinjani Geopark × UNESCO Collaboration",
+        timeframe: "Sep 2024 — Nov 2024",
+        role: "Training & Program Support — Disaster Education",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Supported disaster education and training programs for 100+ students.</>,
+          <>Coordinated logistics, documentation, attendance, facilitators, schools, and reporting.</>,
         ],
         images: [],
+      },
+      {
+        company: "Yaksa Pelestari Bumi Berkelanjutan",
+        timeframe: "Dec 2022 — Feb 2023",
+        role: "Development & Planning Staff",
+        achievements: [
+          <>Supported Zero Waste City research and policy analysis.</>,
+          <>Developed planning documents, environmental assessments, reports, and public education materials.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "IPB University — Climatology Lab",
+        timeframe: "Apr 2018 — Sep 2019",
+        role: "Air Quality Researcher — PM2.5 Monitoring Project",
+        achievements: [
+          <>Designed and assembled an IoT-based PM2.5 monitoring device for real-time data collection.</>,
+          <>Managed data processing, database integration, analysis, and technical documentation.</>,
+        ],
+        images: [
+          {
+            src: "/images/projects/pm25-iot.svg",
+            alt: "ESP32 PM2.5 monitoring system",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "IPB University",
+        description: <>Master of Applied Climatology — final year, expected December 2026 · GPA 3.90</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "IPB University",
+        description: <>Bachelor of Science in Applied Meteorology — graduated July 2021</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Research & Technical Toolkit",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Climate Data & Modeling",
+        description: <>Time-series analysis, climate data analytics, statistical evaluation, and neural-network modeling.</>,
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Python", icon: "javascript" },
+          { name: "Keras", icon: "document" },
+          { name: "Pandas", icon: "document" },
+          { name: "NumPy", icon: "document" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/ai-climate-modeling.svg",
+            alt: "AI-based climate modeling visualization",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Environmental Monitoring & IoT",
+        description: <>PM2.5 monitoring, Arduino/ESP32 prototyping, data logging, SQL, and web visualization.</>,
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "PM2.5", icon: "eye" },
+          { name: "Arduino", icon: "document" },
+          { name: "ESP32", icon: "rocket" },
+          { name: "SQL", icon: "document" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+      },
+      {
+        title: "Project, MEL & Communication",
+        description: <>Project coordination, monitoring and evaluation, reporting, stakeholder communication, and climate storytelling.</>,
+        tags: [
+          { name: "MEL", icon: "document" },
+          { name: "Climate Education", icon: "book" },
+          { name: "Stakeholders", icon: "person" },
+        ],
+      },
+      {
+        title: "Spatial & Data Tools",
+        description: <>ArcGIS, Python-based analysis, reporting, and evidence-based environmental planning.</>,
+        tags: [
+          { name: "ArcGIS", icon: "globe" },
+          { name: "Python", icon: "javascript" },
+          { name: "Data Analytics", icon: "eye" },
         ],
       },
     ],
@@ -236,69 +243,38 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "Notes",
+  title: `Climate Notes — ${person.name}`,
+  description: `Notes on climate data, resilience, air quality, and environmental communication by ${person.name}.`,
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Research",
+  title: `Research & Projects — ${person.name}`,
+  description: `Selected climate research, environmental technology, and social impact projects by ${person.name}.`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  label: "Fieldwork",
+  title: `Fieldwork — ${person.name}`,
+  description: `Selected visual documentation from climate and environmental work.`,
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      src: "/images/projects/ai-climate-modeling.svg",
+      alt: "AI-based climate modeling",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      src: "/images/projects/pm25-iot.svg",
+      alt: "PM2.5 IoT monitoring",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      src: "/images/projects/carbon-vlogger.svg",
+      alt: "Carbon Vlogger climate education",
       orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
     },
   ],
 };
