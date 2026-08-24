@@ -109,22 +109,6 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              <Row s={{ hide: true }}>
-                <ToggleButton
-                  prefixIcon="calculator"
-                  href="/carbon-calculator"
-                  label="Carbon Tool"
-                  selected={pathname.startsWith("/carbon-calculator")}
-                />
-              </Row>
-              <Row hide s={{ hide: false }}>
-                <ToggleButton
-                  prefixIcon="calculator"
-                  href="/carbon-calculator"
-                  selected={pathname.startsWith("/carbon-calculator")}
-                />
-              </Row>
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/work"] && (
                 <>
                   <Row s={{ hide: true }}>
@@ -178,6 +162,25 @@ export const Header = () => {
                       prefixIcon="gallery"
                       href="/gallery"
                       selected={pathname.startsWith("/gallery")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/carbon-calculator"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="rocket"
+                      href="/carbon-calculator"
+                      label="Carbon Calculator"
+                      selected={pathname.startsWith("/carbon-calculator")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="rocket"
+                      href="/carbon-calculator"
+                      selected={pathname.startsWith("/carbon-calculator")}
                     />
                   </Row>
                 </>

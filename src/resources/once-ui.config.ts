@@ -14,15 +14,15 @@ import {
 import { home, person, social } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://putuprofile.me";
+const baseURL: string = "https://demo.magic-portfolio.com";
 
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
+  "/blog": true,
+  "/gallery": true,
   "/carbon-calculator": true,
-  "/blog": false,
-  "/gallery": false,
 };
 
 const display: DisplayConfig = {
@@ -33,7 +33,9 @@ const display: DisplayConfig = {
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
-const protectedRoutes: ProtectedRoutesConfig = {};
+const protectedRoutes: ProtectedRoutesConfig = {
+  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+};
 
 // Import and set font for each variant
 import { Geist } from "next/font/google";
@@ -74,11 +76,11 @@ const fonts: FontsConfig = {
 const style: StyleConfig = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate | mint | rose | dusk | custom
-  brand: "green", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "yellow", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
-  border: "rounded", // rounded | playful | conservative | sharp
+  border: "playful", // rounded | playful | conservative | sharp
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
@@ -118,7 +120,7 @@ const effects: EffectsConfig = {
   },
   dots: {
     display: true,
-    opacity: 24,
+    opacity: 40,
     size: "2",
     color: "brand-background-strong",
   },
