@@ -79,7 +79,7 @@ export async function generateMetadata() {
 
 export default function Dashboard() {
   return (
-    <Column maxWidth="m" gap="l" paddingY="10" horizontal="center">
+    <Column maxWidth="m" gap="l" paddingY="12" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -105,7 +105,7 @@ export default function Dashboard() {
       </Column>
 
       <Row fillWidth gap="l" s={{ direction: "column" }} vertical="start">
-        <Column flex={1.35} gap="m">
+        <Column flex={1} gap="m">
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Project impact</Heading>
             <Row fillWidth wrap gap="8" s={{ direction: "column" }}>
@@ -123,10 +123,10 @@ export default function Dashboard() {
 
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Research & technical work</Heading>
-            <Row fillWidth wrap gap="10" s={{ direction: "column" }}>
+            <Row fillWidth wrap gap="8" s={{ direction: "column" }}>
               {research.map((item) => (
                 <Card key={item.title} className={styles.researchCard} border="neutral-alpha-weak" radius="l" padding="m">
-                  <Column fillWidth gap="10">
+                  <Column fillWidth gap="8">
                     <Row fillWidth horizontal="between" gap="12" vertical="start">
                       <Column gap="4">
                         <Heading as="h3" variant="heading-strong-s">{item.title}</Heading>
@@ -149,12 +149,12 @@ export default function Dashboard() {
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Carbon & climate action</Heading>
             <Card border="brand-alpha-medium" background="brand-alpha-weak" radius="l" padding="m">
-              <Column gap="10">
+              <Column gap="8">
                 <Heading as="h3" variant="heading-strong-s">Carbon Calculator</Heading>
                 <Text variant="body-default-s" onBackground="neutral-weak">
                   Explore transport and electricity emissions with activity-based reduction scenarios.
                 </Text>
-                <Row gap="6" wrap>
+                <Row gap="8" wrap>
                   <Badge arrow={false}>Transport</Badge>
                   <Badge arrow={false}>Electricity</Badge>
                   <Badge arrow={false}>Waste</Badge>
@@ -168,7 +168,7 @@ export default function Dashboard() {
           <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Core capabilities</Heading>
             <Card border="neutral-alpha-weak" radius="l" padding="m">
-              <Row wrap gap="6">
+              <Row wrap gap="8">
                 {skills.map((skill) => <Badge key={skill} arrow={false}>{skill}</Badge>)}
               </Row>
             </Card>
