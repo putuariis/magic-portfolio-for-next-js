@@ -8,7 +8,7 @@ const person: Person = {
   role: "Climate Learner",
   avatar: "/images/avatar.jpg",
   email: "putuaris.g@gmail.com",
-  location: "Indonesia/Jakarta",
+  location: "Asia/Jakarta",
   languages: ["Bahasa Indonesia", "English"],
   locale: "en",
 };
@@ -54,7 +54,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.name}, a climate and air quality professional with experience in project management,
+      I&apos;m {person.name}, a climate and air quality professional with experience in project management,
       environmental education, data analysis, and community-based climate action.
     </>
   ),
