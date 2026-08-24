@@ -167,7 +167,7 @@ export default function Dashboard() {
             </Card>
           </Column>
 
-          <Column fillWidth gap="s">
+          <Column fillWidth gap="m">
             <Heading as="h2" variant="display-strong-xs">Career & academic timeline</Heading>
             <Card border="neutral-alpha-weak" radius="l" padding="s">
               <Column className={styles.timeline} fillWidth>
