@@ -1,0 +1,37 @@
+.metricCard {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+.researchCard {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.timeline {
+  position: relative;
+  gap: 0;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 18px 0 18px 0;
+  border-bottom: 1px solid var(--neutral-alpha-weak);
+}
+
+.timelineItem:last-child {
+  border-bottom: 0;
+}
+
+.timelineYear {
+  width: 92px;
+  flex: 0 0 92px;
+  padding-top: 4px;
+}
+
+@media (max-width: 560px) {
+  .timelineYear {
+    width: 76px;
+    flex-basis: 76px;
+  }
+}

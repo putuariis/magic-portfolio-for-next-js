@@ -23,6 +23,7 @@ const routes: RoutesConfig = {
   "/blog": true,
   "/gallery": true,
   "/carbon-calculator": true,
+  "/dashboard": true,
 };
 
 const display: DisplayConfig = {
