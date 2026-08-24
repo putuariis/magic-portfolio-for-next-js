@@ -107,9 +107,9 @@ export default function Dashboard() {
 
       <Row fillWidth gap="m" s={{ direction: "column" }} vertical="start">
         <Column flex={1} gap="m">
-          <Column fillWidth gap="m">
+          <Column fillWidth gap="s">
             <Heading as="h2" variant="display-strong-xs">Project impact</Heading>
-            <Card border="neutral-alpha-weak" radius="l" padding="m">
+            <Card border="neutral-alpha-weak" radius="l" padding="l">
               <ImpactVisualization impact={impact} />
             </Card>
           </Column>
