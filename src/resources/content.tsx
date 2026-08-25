@@ -164,9 +164,9 @@ const about: About = {
       {
         name: "Academic Engagement",
         description:[
-              <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</>, 
-              <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</>, 
-              <>Presenter, Climate Policy Conference – Institut Hijau Indonesia. 2025</>,
+              <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).;</>, 
+              <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.;</>, 
+              <>Presenter, Climate Policy Conference – Institut Hijau Indonesia 2025;</>,
             ],
       },
       {
