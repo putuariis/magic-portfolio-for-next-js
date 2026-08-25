@@ -73,10 +73,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Early-career climate and air quality professional with hands-on experience in project coordination,
-        data management, environmental program implementation, climate education, community-based initiatives,
-        and air quality research. Experienced in documentation, reporting, monitoring, stakeholder engagement,
-        and evidence-based environmental solutions.
+        Early-career climate professional with hands-on experience in project coordination,
+        data management, environmental program implementation, climate education and community-based initiatives climate action. 
+        Experienced in data analysis, climate modeling, Internet of Things embed system,  stakeholder engagement,
+        and evidence-based environmental climate smart solutions.
       </>
     ),
   },
@@ -84,6 +84,16 @@ const about: About = {
     display: true,
     title: "Work Experience",
     experiences: [
+      {
+        company: "PT. Suryo Riset Indonesia",
+        timeframe: "July 2026 – Present",
+        role: "RnD Developer",
+        achievements: [
+          <>Design and development of Greenhouse Gases (GhG) IoT device</>,
+          <>Modeling, calibrating, and conecting the sensor to database and web system</>,
+          <>Analyze, visualize, and check factor eror and corelation to standarize device</>,
+        ],
+      },
       {
         company: "Carbonaddons (Carbon Academy Vol. 3)",
         timeframe: "Apr 2026 – Present",
