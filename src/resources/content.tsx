@@ -162,8 +162,8 @@ const about: About = {
         description: <>Bachelor of Science in Applied Meteorology · Graduated July 2021</>,
       },
       {
-        name: "Academic Engagement",
-        description:(
+      name: "Academic Engagement",
+      description:(
           <ul style={{ margin: 0, paddingLeft: "26px" }}>
               <li>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</li>, 
               <li>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</li>, 
