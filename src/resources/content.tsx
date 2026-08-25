@@ -229,6 +229,7 @@ const about: About = {
   },
 };
 
+
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
