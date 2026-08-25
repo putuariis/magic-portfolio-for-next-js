@@ -163,24 +163,17 @@ const about: About = {
       },
       {
         name: "Academic Engagement",
-        description:[
-              <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</>, 
-              <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</>, 
-              <>Presenter, Climate Policy Conference – Institut Hijau Indonesia 2025</>,
-            ],
-      },
-      {
-        name: "Leadership & Achievements",
-        description: [
-          <>Best Position Paper – UNDP (Climate Action), International Model United Nations 2021;</>,
-          <>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University (Multinational Collaboration).</>,
-          <>2nd Best Poster Design Competition at FMIPA art competiton with theme Climate Action </>,
-        ]
+        description:(
+          <ul style={{ margin: 0, paddingLeft: "26px" }}>
+              <li>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</li>, 
+              <li>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</li>, 
+              <li>Presenter, Climate Policy Conference – Institut Hijau Indonesia 2025</li>,
+            ),
       },
       {
       name: "Leadership & Achievements",
       description: (
-        <ul style={{ margin: 0, paddingLeft: "20px" }}>
+        <ul style={{ margin: 0, paddingLeft: "26px" }}>
             <li>Best Position Paper – UNDP (Climate Action), International Model United Nations 2021.</li>
             <li>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University.</li>
             <li>2nd Best Poster Design Competition at FMIPA art competition with theme Climate Action.</li>
@@ -189,11 +182,12 @@ const about: About = {
       },
       {
         name: "Certifications & Training",
-        description: [
-          <>Strengthening Climate Adaptation & Resilience – UN CC: Learn (2024);</>,
-          <>Google Data Analytics with R Programming – Coursera (2023);</>,
-          <>Global Environmental Management – Technical University of Denmark – Coursera (2021); </>,
-          <>Fullstack Developer – KOMINFO (2022).</>,
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "26px" }}>
+            <li>Strengthening Climate Adaptation & Resilience – UN CC: Learn (2024);</li>,
+            <li>Google Data Analytics with R Programming – Coursera (2023);</li>,
+            <li>Global Environmental Management – Technical University of Denmark – Coursera (2021); </li>,
+            <li>Fullstack Developer – KOMINFO (2022).</li>,
         ]
       },
     ],
