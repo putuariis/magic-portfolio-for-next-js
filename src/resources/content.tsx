@@ -171,7 +171,7 @@ const about: About = {
       },
       {
         name: "Leadership & Achievements",
-        description: 
+        description: [
           <>Best Position Paper – UNDP (Climate Action), International Model United Nations 2021;</>,
           <>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University (Multinational Collaboration).</>,
           <>2nd Best Poster Design Competition at FMIPA art competiton with theme Climate Action </>,
