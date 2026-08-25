@@ -40,7 +40,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name} – Climate Learner`,
   description: `Portfolio of ${person.name}, a climate and air quality professional working across climate education, environmental programs, data analysis, and research.`,
-  headline: <>Wellcome Wanderer!</>,
+  headline: <>Welcome Wanderer!</>,
   featured: {
     display: true,
     title: (
@@ -163,22 +163,28 @@ const about: About = {
       },
       {
         name: "Academic Engagement",
-        description: <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025);</>, 
-                     <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025;</>, 
-                     <>Presenter, Climate Policy Conference – Institut Hijau Indonesia. 2025</>,
+        description:[
+              <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</>, 
+              <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</>, 
+              <>Presenter, Climate Policy Conference – Institut Hijau Indonesia. 2025</>,
+            ],
       },
       {
         name: "Leadership & Achievements",
-        description: <>Best Position Paper – UNDP (Climate Action), International Model United Nations 2021;</>,
-                     <>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University (Multinational Collaboration).</>,
-                     <>2nd Best Poster Design Competition at FMIPA art competiton with theme Climate Action </>,
+        description: 
+          <>Best Position Paper – UNDP (Climate Action), International Model United Nations 2021;</>,
+          <>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University (Multinational Collaboration).</>,
+          <>2nd Best Poster Design Competition at FMIPA art competiton with theme Climate Action </>,
+        ]
       },
       {
         name: "Certifications & Training",
-        description: <>Strengthening Climate Adaptation & Resilience – UN CC: Learn (2024);</>,
-                     <>Google Data Analytics with R Programming – Coursera (2023);</>,
-                     <>Global Environmental Management – Technical University of Denmark – Coursera (2021); </>,
-                     <>Fullstack Developer – KOMINFO (2022).</>,
+        description: [
+          <>Strengthening Climate Adaptation & Resilience – UN CC: Learn (2024);</>,
+          <>Google Data Analytics with R Programming – Coursera (2023);</>,
+          <>Global Environmental Management – Technical University of Denmark – Coursera (2021); </>,
+          <>Fullstack Developer – KOMINFO (2022).</>,
+        ]
       },
     ],
   },
