@@ -89,7 +89,7 @@ const about: About = {
         timeframe: "July 2026 – Present",
         role: "RnD Developer",
         achievements: [
-          <>Design and development of Greenhouse Gases (GhG) IoT device</>,
+          <>Design and development of several IoT device including Greenhouse Gases (GhG) and soil measurement device 7 in 1 </>,
           <>Modeling, calibrating, and conecting the sensor to database and web system</>,
           <>Analyze, visualize, and check factor eror and corelation to standarize device</>,
         ],
