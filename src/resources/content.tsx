@@ -164,9 +164,9 @@ const about: About = {
       {
         name: "Academic Engagement",
         description:[
-              <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).;</>, 
-              <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.;</>, 
-              <>Presenter, Climate Policy Conference – Institut Hijau Indonesia 2025;</>,
+              <>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</>, 
+              <>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</>, 
+              <>Presenter, Climate Policy Conference – Institut Hijau Indonesia 2025</>,
             ],
       },
       {
@@ -176,6 +176,16 @@ const about: About = {
           <>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University (Multinational Collaboration).</>,
           <>2nd Best Poster Design Competition at FMIPA art competiton with theme Climate Action </>,
         ]
+      },
+      {
+      name: "Leadership & Achievements",
+      description: (
+        <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>Best Position Paper – UNDP (Climate Action), International Model United Nations 2021.</li>
+            <li>Team Leader, achieve 2nd Best Group Presenter at International Summer Course 2025, IPB University.</li>
+            <li>2nd Best Poster Design Competition at FMIPA art competition with theme Climate Action.</li>
+        </ul>
+       ),
       },
       {
         name: "Certifications & Training",
