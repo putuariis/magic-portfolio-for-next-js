@@ -168,7 +168,7 @@ const about: About = {
               <li>Oral Presenter, International Young Environmental Scientists Conference (WRI Indonesia, 2025).</li>, 
               <li>Participant, Asia Hub & CIAERA Anual Summit (WEF Nexus) 2025.</li>, 
               <li>Presenter, Climate Policy Conference – Institut Hijau Indonesia 2025</li>,
-            ),
+        ),
       },
       {
       name: "Leadership & Achievements",
@@ -188,7 +188,7 @@ const about: About = {
             <li>Google Data Analytics with R Programming – Coursera (2023);</li>,
             <li>Global Environmental Management – Technical University of Denmark – Coursera (2021); </li>,
             <li>Fullstack Developer – KOMINFO (2022).</li>,
-        ]
+        )
       },
     ],
   },
